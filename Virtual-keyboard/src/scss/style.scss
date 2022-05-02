@@ -12,7 +12,8 @@ html {
 	scroll-behavior: smooth;
 }
 
-.core,
+.header,
+.welcome,
 .footer {
 	font-family: Inter;
 	font-size: 20px;
@@ -23,7 +24,8 @@ html {
 	color: var(--white);
 }
 
-.core,
+.header,
+.welcome,
 .footer {
 	background: var(--bg-dark);
 	transition: background 0.5s ease-in-out 0s;
@@ -102,6 +104,83 @@ footer {
 }
 
 // temp styles
+
+// keyboard section
+
+.welcome {
+
+	&__container {}
+
+	&__title {}
+
+	&__body {}
+
+	&__input {}
+
+	&__keyboard {}
+}
+
+.keyboard {
+	width: 100%;
+	aspect-ratio: 700 / 237;
+	background: #111111;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	border-radius: 10px;
+
+	&__row {
+		width: 100%;
+		height: calc(20% - 8px);
+		display: flex;
+		justify-content: space-between;
+		column-gap: 10px;
+	}
+
+	&__key {
+		height: 100%;
+		border-radius: 10px;
+		transition: box-shadow 0.5s ease-out 0s, border 0.5s ease-out 0s, border-radius 0.1s ease-out 0s;
+
+		&:hover {
+			border: 1px solid #f9b5fd;
+			box-shadow: 0px 0px 5px 5px #f9b5fd20, 0px 0px 0px 0px #f9b5fd20 inset;
+			border-radius: 2px;
+		}
+	}
+
+	&__not-func-key {
+		border: 1px solid #ff073a;
+		box-shadow: 0px 0px 4px 4px #ff073920, 0px 0px 5px 5px #ff073920 inset;
+	}
+
+	&__func-key {
+		border: 1px solid #079cca;
+		box-shadow: 0px 0px 4px 4px #079cca20, 0px 0px 5px 5px #079cca20 inset;
+	}
+
+	&__fix-size {
+		aspect-ratio: 1 / 1;
+	}
+
+	&__flex-size {
+		width: 100%;
+	}
+
+	&__first-row {}
+
+	&__second-row {}
+
+	&__third-row {}
+
+	&__fourth-row {}
+
+	&__fifth-row {}
+}
+
+
+// keyboard section
 
 //footer
 

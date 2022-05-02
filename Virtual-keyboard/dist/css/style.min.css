@@ -130,7 +130,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.core,
+.header,
+.welcome,
 .footer {
   font-family: Inter;
   font-size: 20px;
@@ -141,7 +142,8 @@ html {
   color: var(--white);
 }
 
-.core,
+.header,
+.welcome,
 .footer {
   background: var(--bg-dark);
   transition: background 0.5s ease-in-out 0s;
@@ -217,6 +219,47 @@ footer {
   flex: 0 0 auto;
 }
 
+.keyboard {
+  width: 100%;
+  aspect-ratio: 700/237;
+  background: #111111;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border-radius: 10px;
+}
+.keyboard__row {
+  width: 100%;
+  height: calc(20% - 8px);
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+.keyboard__key {
+  height: 100%;
+  border-radius: 10px;
+  transition: box-shadow 0.5s ease-out 0s, border 0.5s ease-out 0s, border-radius 0.1s ease-out 0s;
+}
+.keyboard__key:hover {
+  border: 1px solid #f9b5fd;
+  box-shadow: 0px 0px 5px 5px #f9b5fd20, 0px 0px 0px 0px #f9b5fd20 inset;
+  border-radius: 2px;
+}
+.keyboard__not-func-key {
+  border: 1px solid #ff073a;
+  box-shadow: 0px 0px 4px 4px #ff073920, 0px 0px 5px 5px #ff073920 inset;
+}
+.keyboard__func-key {
+  border: 1px solid #079cca;
+  box-shadow: 0px 0px 4px 4px #079cca20, 0px 0px 5px 5px #079cca20 inset;
+}
+.keyboard__fix-size {
+  aspect-ratio: 1/1;
+}
+.keyboard__flex-size {
+  width: 100%;
+}
 .footer__body {
   display: flex;
   height: 110px;
