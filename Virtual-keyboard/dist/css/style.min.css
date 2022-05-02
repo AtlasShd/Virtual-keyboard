@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Merriweather;
+  font-display: swap;
+  src: url("../fonts/Merriweather-Bold.woff2") format("woff2"), url("../fonts/Merriweather-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Merriweather;
+  font-display: swap;
+  src: url("../fonts/Merriweather-Regular.woff2") format("woff2"), url("../fonts/Merriweather-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --bg-dark: #000;
+  --gold: #bdae82;
+  --white: #fff;
+  --matte-black: #1c1c1c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.core,
+.footer {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+  color: var(--white);
+}
+
+.core,
+.footer {
+  background: var(--bg-dark);
+  transition: background 0.5s ease-in-out 0s;
+}
+
+.container {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.title {
+  font-family: Merriweather;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 0em;
+  color: var(--gold);
+  max-width: 700px;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto 60px;
+}
+.title h2 {
+  padding: 0 20px;
+  background: var(--bg-dark);
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 350px;
+    margin: 0 auto 30px;
+  }
+}
+
+button,
+a,
+p,
+h1,
+h2,
+span {
+  transition: color 0.5s ease-out 0s;
+}
+
+svg {
+  transition: fill 0.5s ease-out 0s;
+}
+
+#transition-none * {
+  transition: none !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.footer__body {
+  display: flex;
+  height: 110px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__body a {
+  display: flex;
+  align-items: center;
+}
+.footer__body a:hover {
+  color: var(--gold);
+}
+.footer__body a:hover svg {
+  fill: var(--gold);
+}
+.footer__body svg {
+  width: 28px;
+  margin-right: 8px;
+  transition: fill 0.5s ease 0s;
+  fill: var(--white);
+}
+.footer__year {
+  display: flex;
+  width: auto;
+}
+@media (max-width: 768px) {
+  .footer__year {
+    padding-top: 20px;
+  }
+  .footer__company {
+    padding-bottom: 20px;
+  }
+  .footer__body {
+    flex-direction: column;
+  }
+}
