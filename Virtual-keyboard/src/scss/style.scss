@@ -6,6 +6,12 @@
 	--gold: #bdae82;
 	--white: #fff;
 	--matte-black: #1c1c1c;
+	--red: #ff0739;
+	--opacity-red: #ff073920;
+	--blue: #079cca;
+	--opacity-blue: #079cca20;
+	--sky: #f9b5fd;
+	--opacity-sky: #f9b5fd20;
 }
 
 html {
@@ -43,14 +49,15 @@ html {
 }
 
 .title {
-	font-family: Merriweather;
-	font-size: 40px;
+	font-family: Inter;
+	font-size: 48px;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 200;
 	line-height: 80px;
 	text-align: center;
-	letter-spacing: 0em;
-	color: var(--gold);
+	letter-spacing: 2px;
+	color: var(--blue);
+	text-shadow: 0 1px 5px var(--blue), 0 -1px 5px var(--blue);
 	max-width: 700px;
 	width: 100%;
 	height: 80px;
@@ -108,20 +115,65 @@ footer {
 // keyboard section
 
 .welcome {
+	height: 100%;
 
-	&__container {}
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
 
-	&__title {}
+	&__title {
+		flex: 0 0 auto;
+	}
 
-	&__body {}
+	&__body {
+		flex: 1 0 auto;
+		display: grid;
+		grid-template-rows: 1fr auto;
+	}
 
-	&__input {}
+	&__textarea {
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		max-width: 1240px;
+		padding-bottom: 20px;
+
+		& textarea {
+			max-width: calc(100vw - 40px);
+			padding: 10px;
+			background: var(--matte-black);
+			width: 100%;
+			height: 100%;
+			min-height: 48px;
+			min-width: 220px;
+			color: var(--red);
+			font-size: 18px;
+			font-weight: 200;
+			letter-spacing: 3px;
+			line-height: 24px;
+			text-shadow: 0 1px 5px var(--red), 0 -1px 5px var(--red);
+		}
+	}
 
 	&__keyboard {}
+
+	@media (max-width: 768px) {
+		&__textarea {
+
+			& textarea {
+				max-width: calc(100vw - 20px);
+				font-size: 14px;
+				letter-spacing: 2px;
+				line-height: 18px;
+			}
+		}
+	}
 }
 
 .keyboard {
 	width: 100%;
+	max-width: calc(100vw - 40px);
 	aspect-ratio: 700 / 237;
 	background: #111111;
 	padding: 10px;
@@ -139,25 +191,38 @@ footer {
 	}
 
 	&__key {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 17px;
+		font-weight: 200;
+		letter-spacing: 0.15em;
+		line-height: 0;
 		height: 100%;
 		border-radius: 10px;
-		transition: box-shadow 0.5s ease-out 0s, border 0.5s ease-out 0s, border-radius 0.1s ease-out 0s;
+		transition: box-shadow 0.25s ease-out 0s, border 0.5s ease-out 0s, border-radius 0.125s ease-out 0s, color 0.5s ease-out 0s;
+		cursor: pointer;
 
 		&:hover {
-			border: 1px solid #f9b5fd;
-			box-shadow: 0px 0px 5px 5px #f9b5fd20, 0px 0px 0px 0px #f9b5fd20 inset;
-			border-radius: 2px;
+			color: var(--sky);
+			border: 1px solid var(--sky);
+			box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
+			border-radius: 0;
 		}
 	}
 
 	&__not-func-key {
-		border: 1px solid #ff073a;
-		box-shadow: 0px 0px 4px 4px #ff073920, 0px 0px 5px 5px #ff073920 inset;
+		color: var(--red);
+		text-shadow: 0 1px 5px var(--opacity-red), 0 -1px 5px var(--opacity-red);
+		border: 1px solid var(--red);
+		box-shadow: 0px 0px 5px 5px var(--opacity-red), 0px 0px 8px 6px var(--opacity-red) inset;
 	}
 
 	&__func-key {
-		border: 1px solid #079cca;
-		box-shadow: 0px 0px 4px 4px #079cca20, 0px 0px 5px 5px #079cca20 inset;
+		color: var(--blue);
+		text-shadow: 0 1px 5px var(--opacity-blue), 0 -1px 5px var(--opacity-blue);
+		border: 1px solid var(--blue);
+		box-shadow: 0px 0px 5px 5px var(--opacity-blue), 0px 0px 8px 6px var(--opacity-blue) inset;
 	}
 
 	&__fix-size {
@@ -177,6 +242,24 @@ footer {
 	&__fourth-row {}
 
 	&__fifth-row {}
+
+	@media (max-width: 768px) {
+		row-gap: 5px;
+		border-radius: 0;
+		padding: 5px;
+		max-width: 100vw;
+
+		&__row {
+			column-gap: 5px;
+			height: calc(20% - 4px);
+		}
+
+		&__key {
+			border-radius: 5px;
+			font-size: 12px;
+			letter-spacing: 0.1em;
+		}
+	}
 }
 
 
@@ -198,12 +281,17 @@ footer {
 		& a {
 			display: flex;
 			align-items: center;
+			color: var(--white);
+			font-weight: 200;
+			letter-spacing: 3px;
+			transition: text-shadow 0.25s ease-out 0s, color 0.25s ease-out 0s;
 
 			&:hover {
-				color: var(--gold);
+				color: var(--blue);
+				text-shadow: 0 1px 5px var(--blue), 0 -1px 5px var(--blue);
 
 				& svg {
-					fill: var(--gold);
+					fill: var(--blue);
 				}
 			}
 		}
@@ -219,6 +307,9 @@ footer {
 	&__year {
 		display: flex;
 		width: auto;
+		color: var(--white);
+		font-weight: 200;
+		letter-spacing: 3px;
 	}
 
 	&__company {}
