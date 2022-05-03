@@ -1,0 +1,396 @@
+[
+	[ 
+  	{
+  	  "name": "backquote",
+			"value": "`",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "one",
+			"value": "1",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "two",
+			"value": "2",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "three",
+			"value": "3",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "four",
+			"value": "4",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "five",
+			"value": "5",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "six",
+			"value": "6",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "seven",
+			"value": "7",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "eight",
+			"value": "8",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "nine",
+			"value": "9",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "zero",
+			"value": "0",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "minus",
+			"value": "-",
+			"functional": "not-func",
+			"size": "fix"
+  	},
+  	{
+  	  "name": "equal",
+			"value": "=",
+			"functional": "not-func",
+			"size": "fix"
+ 		},
+ 		{
+ 	   "name": "backspace",
+			"value": "&#10229;",
+			"functional": "func",
+			"size": "flex"
+ 		}
+	],
+	[
+		{
+			"name": "tab",
+			"value": "Tab",
+			"functional": "func",
+			"size": "flex"
+		},
+		{
+			"name": "q",
+			"value": "q",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "w",
+			"value": "w",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "e",
+			"value": "e",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "r",
+			"value": "r",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "t",
+			"value": "t",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "y",
+			"value": "y",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "u",
+			"value": "u",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "i",
+			"value": "i",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "o",
+			"value": "o",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "p",
+			"value": "p",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "left-square-bracket",
+			"value": "[",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "right-square-bracket",
+			"value": "]",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "backslash",
+			"value": "\\",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "del",
+			"value": "Del",
+			"functional": "func",
+			"size": "fix"
+		}
+	],
+	[
+		{
+			"name": "capslock",
+			"value": "CapsLock",
+			"functional": "func",
+			"size": "flex"
+		},
+		{
+			"name": "a",
+			"value": "a",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "s",
+			"value": "s",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "d",
+			"value": "d",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "f",
+			"value": "f",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "g",
+			"value": "g",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "h",
+			"value": "h",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "j",
+			"value": "j",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "k",
+			"value": "k",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "l",
+			"value": "l",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "semecolon",
+			"value": ";",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "single-quote",
+			"value": ":",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "enter",
+			"value": "Enter",
+			"functional": "func",
+			"size": "flex"
+		}
+	],
+	[
+		{
+			"name": "left-shift",
+			"value": "Shift",
+			"functional": "func",
+			"size": "flex"
+		},
+		{
+			"name": "z",
+			"value": "z",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "x",
+			"value": "x",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "c",
+			"value": "c",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "v",
+			"value": "v",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "b",
+			"value": "b",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "n",
+			"value": "n",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "m",
+			"value": "m",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "comma",
+			"value": ",",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "dot",
+			"value": ".",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "slash",
+			"value": "/",
+			"functional": "not-func",
+			"size": "fix"
+		},
+		{
+			"name": "up-arrow",
+			"value": "△",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "right-shift",
+			"value": "Shift",
+			"functional": "func",
+			"size": "flex"
+		}
+	],
+	[
+		{
+			"name": "left-ctrl",
+			"value": "Ctrl",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "win",
+			"value": "Win",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "left-alt",
+			"value": "Alt",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "space",
+			"value": "",
+			"functional": "not-func",
+			"size": "flex"
+		},
+		{
+			"name": "right-alt",
+			"value": "Alt",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "left-arrow",
+			"value": "◁",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "down-arrow",
+			"value": "▽",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "right-arrow",
+			"value": "▷",
+			"functional": "func",
+			"size": "fix"
+		},
+		{
+			"name": "right-ctrl",
+			"value": "Ctrl",
+			"functional": "func",
+			"size": "fix"
+		}
+	]
+]

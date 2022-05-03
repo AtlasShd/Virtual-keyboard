@@ -16,90 +16,92 @@
 	<main>
 		<section class="welcome" id="welcome">
 			<div class="welcome__container container">
-				<div class="welcome__title title">Virtual keyboard</div>
-				<div class="welcome__body">
-					<div class="welcome__textarea">
-						<textarea name="textarea" id="textarea" cols="30" rows="2"></textarea>
+				<h2 class="welcome__title title">Virtual keyboard</h1>
+					<div class="welcome__body">
+						<div class="keyboard">
+							<div class="keyboard__textarea">
+								<textarea name="textarea" id="textarea" cols="30" rows="2"></textarea>
+							</div>
+							<div class="keyboard__keyboard">
+								<div class="keyboard__row keyboard__first-row">
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="backquote">`</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="one">1</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="two">2</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="three">3</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="four">4</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="five">5</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="six">6</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="seven">7</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="eight">8</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="nine">9</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="zero">0</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="minus">-</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="equal">=</button>
+									<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="backspace">&#10229;</button>
+								</div>
+								<div class="keyboard__row keyboard__second-row">
+									<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="tab">Tab</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="q">q</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="w">w</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="e">e</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="r">r</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="t">t</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="y">y</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="u">u</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="i">i</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="o">o</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="p">p</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size"
+										id="left-square-bracket">[</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size"
+										id="right-square-bracket">]</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="backslash">\</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="del">Del</button>
+								</div>
+								<div class="keyboard__row keyboard__third-row">
+									<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="capslock">CapsLock</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="a">a</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="s">s</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="d">d</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="f">f</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="g">g</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="h">h</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="j">j</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="k">k</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="l">l</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="semicolon">;</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="single-quote">'</button>
+									<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="enter">Enter</button>
+								</div>
+								<div class="keyboard__row keyboard__fourth-row">
+									<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="left-shift">Shift</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="z">z</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="x">x</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="c">c</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="v">v</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="b">b</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="n">n</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="m">m</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="comma">,</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="dot">.</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="slash">/</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="up-arrow">△</button>
+									<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="right-shift">Shift</button>
+								</div>
+								<div class="keyboard__row keyboard__fifth-row">
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="left-ctrl">Ctrl</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="win">Win</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="left-alt">Alt</button>
+									<button class="keyboard__key keyboard__not-func-key keyboard__flex-size" id="space"></button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="right-alt">Alt</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="left-arrow">◁</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="down-arrow">▽</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="right-arrow">▷</button>
+									<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="right-ctrl">Ctrl</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="welcome__keyboard keyboard">
-						<div class="keyboard__row keyboard__first-row">
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="esc">`</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="one">1</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="two">2</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="three">3</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="four">4</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="five">5</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="six">6</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="seven">7</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="eight">8</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="nine">9</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="zero">0</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="minus">-</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="equal">=</button>
-							<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="backspace">&#10229;</button>
-						</div>
-						<div class="keyboard__row keyboard__second-row">
-							<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="tab">Tab</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="q">q</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="w">w</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="e">e</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="r">r</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="t">t</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="y">y</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="u">u</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="i">i</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="o">o</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="p">p</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size"
-								id="left-square-bracket">[</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size"
-								id="right-square-bracket">]</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="backslash">\</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="del">Del</button>
-						</div>
-						<div class="keyboard__row keyboard__third-row">
-							<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="capslock">CapsLock</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="a">a</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="s">s</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="d">d</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="f">f</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="g">g</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="h">h</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="j">j</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="k">k</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="l">l</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="semicolon">;</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="single-quote">'</button>
-							<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="enter">Enter</button>
-						</div>
-						<div class="keyboard__row keyboard__fourth-row">
-							<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="left-shift">Shift</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="z">z</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="x">x</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="c">c</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="v">v</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="b">b</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="n">n</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="m">m</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="comma">,</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="dot">.</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__fix-size" id="slash">/</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="up-arrow">△</button>
-							<button class="keyboard__key keyboard__func-key keyboard__flex-size" id="right-shift">Shift</button>
-						</div>
-						<div class="keyboard__row keyboard__fifth-row">
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="left-ctrl">Ctrl</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="win">Win</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="left-alt">Alt</button>
-							<button class="keyboard__key keyboard__not-func-key keyboard__flex-size" id="space"></button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="right-alt">Alt</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="left-arrow">◁</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="down-arrow">▽</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="right-arrow">▷</button>
-							<button class="keyboard__key keyboard__func-key keyboard__fix-size" id="right-ctrl">Ctrl</button>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 	</main>

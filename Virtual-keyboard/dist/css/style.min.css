@@ -140,6 +140,14 @@ html {
   letter-spacing: 0em;
   color: var(--white);
 }
+@media (max-width: 768px) {
+  .header,
+.welcome,
+.footer {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
 
 .header,
 .welcome,
@@ -234,14 +242,15 @@ footer {
   display: grid;
   grid-template-rows: 1fr auto;
 }
-.welcome__textarea {
+
+.keyboard__textarea {
   display: flex;
   justify-content: center;
   align-items: start;
   max-width: 1240px;
   padding-bottom: 20px;
 }
-.welcome__textarea textarea {
+.keyboard__textarea textarea {
   max-width: calc(100vw - 40px);
   padding: 10px;
   background: var(--matte-black);
@@ -256,21 +265,7 @@ footer {
   line-height: 24px;
   text-shadow: 0 1px 5px var(--red), 0 -1px 5px var(--red);
 }
-@media (max-width: 768px) {
-  .welcome__textarea textarea {
-    max-width: calc(100vw - 20px);
-    font-size: 14px;
-    letter-spacing: 2px;
-    line-height: 18px;
-  }
-}
-@media (max-width: 460px) {
-  .welcome__textarea textarea {
-    max-width: calc(100vw - 10px);
-  }
-}
-
-.keyboard {
+.keyboard__keyboard {
   width: 100%;
   max-width: calc(100vw - 40px);
   aspect-ratio: 700/237;
@@ -328,7 +323,13 @@ footer {
   width: 100%;
 }
 @media (max-width: 768px) {
-  .keyboard {
+  .keyboard__textarea textarea {
+    max-width: calc(100vw - 20px);
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 18px;
+  }
+  .keyboard__keyboard {
     row-gap: 5px;
     border-radius: 0;
     padding: 5px;
@@ -345,7 +346,10 @@ footer {
   }
 }
 @media (max-width: 460px) {
-  .keyboard {
+  .keyboard__textarea textarea {
+    max-width: calc(100vw - 10px);
+  }
+  .keyboard__keyboard {
     row-gap: 2px;
     padding: 2px;
   }
