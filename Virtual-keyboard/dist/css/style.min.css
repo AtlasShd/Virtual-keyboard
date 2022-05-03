@@ -298,6 +298,17 @@ footer {
   color: var(--sky);
   border: 1px solid var(--sky);
   box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
+}
+.keyboard__key:active {
+  color: var(--sky);
+  border: 1px solid var(--sky);
+  box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
+  border-radius: 0;
+}
+.keyboard .active {
+  color: var(--sky);
+  border: 1px solid var(--sky);
+  box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
   border-radius: 0;
 }
 .keyboard__not-func-key {

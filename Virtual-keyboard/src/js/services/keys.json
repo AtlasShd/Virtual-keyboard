@@ -4,85 +4,99 @@
   	  "name": "backquote",
 			"value": "`",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Backquote"
   	},
   	{
   	  "name": "one",
 			"value": "1",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit1"
   	},
   	{
   	  "name": "two",
 			"value": "2",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit2"
   	},
   	{
   	  "name": "three",
 			"value": "3",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit3"
   	},
   	{
   	  "name": "four",
 			"value": "4",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit4"
   	},
   	{
   	  "name": "five",
 			"value": "5",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit5"
   	},
   	{
   	  "name": "six",
 			"value": "6",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit6"
   	},
   	{
   	  "name": "seven",
 			"value": "7",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit7"
   	},
   	{
   	  "name": "eight",
 			"value": "8",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit8"
   	},
   	{
   	  "name": "nine",
 			"value": "9",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit9"
   	},
   	{
   	  "name": "zero",
 			"value": "0",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Digit0"
   	},
   	{
   	  "name": "minus",
 			"value": "-",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Minus"
   	},
   	{
   	  "name": "equal",
 			"value": "=",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Equal"
  		},
  		{
  	   "name": "backspace",
 			"value": "&#10229;",
 			"functional": "func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "Backspace"
  		}
 	],
 	[
@@ -90,91 +104,106 @@
 			"name": "tab",
 			"value": "Tab",
 			"functional": "func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "Tab"
 		},
 		{
 			"name": "q",
 			"value": "q",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyQ"
 		},
 		{
 			"name": "w",
 			"value": "w",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyW"
 		},
 		{
 			"name": "e",
 			"value": "e",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyE"
 		},
 		{
 			"name": "r",
 			"value": "r",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyR"
 		},
 		{
 			"name": "t",
 			"value": "t",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyT"
 		},
 		{
 			"name": "y",
 			"value": "y",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyY"
 		},
 		{
 			"name": "u",
 			"value": "u",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyU"
 		},
 		{
 			"name": "i",
 			"value": "i",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyI"
 		},
 		{
 			"name": "o",
 			"value": "o",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyO"
 		},
 		{
 			"name": "p",
 			"value": "p",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyP"
 		},
 		{
 			"name": "left-square-bracket",
 			"value": "[",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "BracketLeft"
 		},
 		{
 			"name": "right-square-bracket",
 			"value": "]",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "BracketRight"
 		},
 		{
 			"name": "backslash",
 			"value": "\\",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Backslash"
 		},
 		{
 			"name": "del",
 			"value": "Del",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Delete"
 		}
 	],
 	[
@@ -182,79 +211,92 @@
 			"name": "capslock",
 			"value": "CapsLock",
 			"functional": "func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "CapsLock"
 		},
 		{
 			"name": "a",
 			"value": "a",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyA"
 		},
 		{
 			"name": "s",
 			"value": "s",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyS"
 		},
 		{
 			"name": "d",
 			"value": "d",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyD"
 		},
 		{
 			"name": "f",
 			"value": "f",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyF"
 		},
 		{
 			"name": "g",
 			"value": "g",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyG"
 		},
 		{
 			"name": "h",
 			"value": "h",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyH"
 		},
 		{
 			"name": "j",
 			"value": "j",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyJ"
 		},
 		{
 			"name": "k",
 			"value": "k",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyK"
 		},
 		{
 			"name": "l",
 			"value": "l",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyL"
 		},
 		{
 			"name": "semecolon",
 			"value": ";",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Semicolon"
 		},
 		{
 			"name": "single-quote",
-			"value": ":",
+			"value": "'",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Quote"
 		},
 		{
 			"name": "enter",
 			"value": "Enter",
 			"functional": "func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "Enter"
 		}
 	],
 	[
@@ -262,79 +304,92 @@
 			"name": "left-shift",
 			"value": "Shift",
 			"functional": "func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "ShiftLeft"
 		},
 		{
 			"name": "z",
 			"value": "z",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyZ"
 		},
 		{
 			"name": "x",
 			"value": "x",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyX"
 		},
 		{
 			"name": "c",
 			"value": "c",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyC"
 		},
 		{
 			"name": "v",
 			"value": "v",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyV"
 		},
 		{
 			"name": "b",
 			"value": "b",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyB"
 		},
 		{
 			"name": "n",
 			"value": "n",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyN"
 		},
 		{
 			"name": "m",
 			"value": "m",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "KeyM"
 		},
 		{
 			"name": "comma",
 			"value": ",",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Comma"
 		},
 		{
 			"name": "dot",
 			"value": ".",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Period"
 		},
 		{
 			"name": "slash",
 			"value": "/",
 			"functional": "not-func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "Slash"
 		},
 		{
 			"name": "up-arrow",
 			"value": "△",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "ArrowUp"
 		},
 		{
 			"name": "right-shift",
 			"value": "Shift",
 			"functional": "func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "ShiftRight"
 		}
 	],
 	[
@@ -342,55 +397,64 @@
 			"name": "left-ctrl",
 			"value": "Ctrl",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "ControlLeft"
 		},
 		{
 			"name": "win",
 			"value": "Win",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "MetaLeft"
 		},
 		{
 			"name": "left-alt",
 			"value": "Alt",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "AltLeft"
 		},
 		{
 			"name": "space",
-			"value": "",
+			"value": " ",
 			"functional": "not-func",
-			"size": "flex"
+			"size": "flex",
+			"endata": "Space"
 		},
 		{
 			"name": "right-alt",
 			"value": "Alt",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "AltRight"
 		},
 		{
 			"name": "left-arrow",
 			"value": "◁",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "ArrowLeft"
 		},
 		{
 			"name": "down-arrow",
 			"value": "▽",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "ArrowDown"
 		},
 		{
 			"name": "right-arrow",
 			"value": "▷",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "ArrowRight"
 		},
 		{
 			"name": "right-ctrl",
 			"value": "Ctrl",
 			"functional": "func",
-			"size": "fix"
+			"size": "fix",
+			"endata": "ControlRight"
 		}
 	]
 ]

@@ -204,8 +204,21 @@ footer {
 			color: var(--sky);
 			border: 1px solid var(--sky);
 			box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
+		}
+
+		&:active {
+			color: var(--sky);
+			border: 1px solid var(--sky);
+			box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
 			border-radius: 0;
 		}
+	}
+
+	& .active {
+		color: var(--sky);
+		border: 1px solid var(--sky);
+		box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
+		border-radius: 0;
 	}
 
 	&__not-func-key {
