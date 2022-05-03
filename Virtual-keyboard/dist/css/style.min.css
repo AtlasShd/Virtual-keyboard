@@ -94,13 +94,6 @@ h6 {
 @font-face {
   font-family: Inter;
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Inter;
-  font-display: swap;
   src: url("../fonts/Inter-ExtraLight.woff2") format("woff2"), url("../fonts/Inter-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
@@ -239,10 +232,13 @@ footer {
 }
 .welcome__body {
   flex: 1 0 auto;
+}
+
+.keyboard {
+  height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
 }
-
 .keyboard__textarea {
   display: flex;
   justify-content: center;
@@ -316,10 +312,10 @@ footer {
   border: 1px solid var(--blue);
   box-shadow: 0px 0px 5px 5px var(--opacity-blue), 0px 0px 8px 6px var(--opacity-blue) inset;
 }
-.keyboard__fix-size {
+.keyboard__fix-key {
   aspect-ratio: 1/1;
 }
-.keyboard__flex-size {
+.keyboard__flex-key {
   width: 100%;
 }
 @media (max-width: 768px) {
@@ -358,7 +354,7 @@ footer {
     height: calc(20% - 1.6px);
   }
   .keyboard__key {
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 0.1em;
   }
 }

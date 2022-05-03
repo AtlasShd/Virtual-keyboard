@@ -133,12 +133,13 @@ footer {
 
 	&__body {
 		flex: 1 0 auto;
-		display: grid;
-		grid-template-rows: 1fr auto;
 	}
 }
 
 .keyboard {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
 
 	&__textarea {
 		display: flex;
@@ -221,23 +222,13 @@ footer {
 		box-shadow: 0px 0px 5px 5px var(--opacity-blue), 0px 0px 8px 6px var(--opacity-blue) inset;
 	}
 
-	&__fix-size {
+	&__fix-key {
 		aspect-ratio: 1 / 1;
 	}
 
-	&__flex-size {
+	&__flex-key {
 		width: 100%;
 	}
-
-	&__first-row {}
-
-	&__second-row {}
-
-	&__third-row {}
-
-	&__fourth-row {}
-
-	&__fifth-row {}
 
 	@media (max-width: 768px) {
 
@@ -290,7 +281,7 @@ footer {
 		}
 
 		&__key {
-			font-size: 9px;
+			font-size: 8px;
 			letter-spacing: 0.1em;
 		}
 	}
