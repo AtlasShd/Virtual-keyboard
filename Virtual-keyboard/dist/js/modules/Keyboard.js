@@ -22,8 +22,6 @@ export default class Keyboard {
       const textarea = document.createElement('textarea');
       textarea.setAttribute('name', 'textarea');
       textarea.setAttribute('id', 'textarea');
-      textarea.setAttribute('cols', '30');
-      textarea.setAttribute('rows', '2');
       textareaDiv.append(textarea);
 
       return textarea;

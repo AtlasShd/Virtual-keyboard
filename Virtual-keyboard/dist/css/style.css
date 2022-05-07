@@ -214,8 +214,8 @@ footer {
 }
 
 .welcome {
-  pointer-events: none;
   height: 100%;
+  pointer-events: none;
 }
 .welcome__container {
   display: flex;
@@ -230,15 +230,18 @@ footer {
 
 .keyboard {
   height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 25px;
+  margin-bottom: -100px;
 }
 .keyboard__textarea {
   display: flex;
   justify-content: center;
   align-items: start;
   max-width: 1240px;
-  padding-bottom: 20px;
+  flex: 1 0 auto;
 }
 .keyboard__textarea textarea {
   max-width: calc(100vw - 40px);
@@ -268,6 +271,7 @@ footer {
   border-radius: 10px;
 }
 .keyboard__row {
+  pointer-events: none;
   width: 100%;
   height: calc(20% - 8px);
   display: flex;
