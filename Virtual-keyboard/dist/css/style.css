@@ -179,6 +179,7 @@ html {
     line-height: 40px;
     max-width: 350px;
     margin: 0 auto 30px;
+    height: 50px;
   }
 }
 
@@ -226,6 +227,7 @@ footer {
 }
 .welcome__body {
   flex: 1 0 auto;
+  padding-bottom: 10px;
 }
 
 .keyboard {

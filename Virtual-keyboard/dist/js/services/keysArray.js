@@ -1,4 +1,4 @@
-const keysJson = [
+const keysArray = [
   [
     {
       name: 'backquote',
@@ -523,4 +523,4 @@ const keysJson = [
   ],
 ];
 
-export default keysJson;
+export default keysArray;

@@ -1,15 +1,17 @@
 import Key from './Key.js';
-import keysJs from '../services/keys.js';
+import keysArray from '../services/keysArray.js';
+import alphabet from '../services/alphabet.js';
 
 export default class Keyboard {
   constructor(name, input = null) {
     this.name = name;
     this.keys = {};
     this.input = input;
+    this.lang = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'eng';
   }
 
   createElement() {
-    const arrOfKeys = keysJs;
+    const arrOfKeys = keysArray;
 
     this.element = document.createElement('div');
     this.element.classList.add(this.name);
@@ -60,10 +62,11 @@ export default class Keyboard {
 
   addEvents() {
     const { keys, input } = this;
+    const keysOfKeys = Object.keys(keys);
 
     const downKeys = {};
 
-    const addEventNotFunc = (key) => {
+    const enterValue = (key) => {
       const start = input.selectionStart;
       const end = input.selectionEnd;
 
@@ -73,6 +76,28 @@ export default class Keyboard {
       input.selectionEnd = start === end ? end + 1 : start + 1;
       input.selectionStart = input.selectionEnd;
     };
+
+    const setLang = (language) => {
+      const secondLanguage = (language === 'eng') ? 'rus' : 'eng';
+
+      keysOfKeys.forEach((i) => {
+        const k = keys[i];
+        if (k.dataset.func === 'false') {
+          const indexOf = alphabet[language].indexOf(k.innerHTML);
+
+          const valueOf = alphabet[secondLanguage][indexOf];
+
+          console.log(indexOf, valueOf);
+          k.innerHTML = valueOf;
+        }
+      });
+      window.localStorage.setItem('lang', secondLanguage);
+
+      return secondLanguage;
+    };
+    if (this.lang === 'rus') {
+      this.lang = setLang('eng');
+    }
 
     document.addEventListener('keydown', (e) => {
       e.preventDefault();
@@ -84,11 +109,11 @@ export default class Keyboard {
       }
 
       if (key.dataset.func === 'false') {
-        addEventNotFunc(key);
+        enterValue(key);
       } else {
         downKeys[e.code] = true;
         if (downKeys.ControlLeft === true && downKeys.AltLeft === true) {
-          console.log(123);
+          this.lang = setLang(this.lang);
         }
       }
 
@@ -104,14 +129,12 @@ export default class Keyboard {
       downKeys[e.code] = false;
     });
 
-    const keysOfKeys = Object.keys(keys);
-
     keysOfKeys.forEach((i) => {
       const key = keys[i];
 
       if (key.dataset.func === 'false') {
         key.addEventListener('click', () => {
-          addEventNotFunc(key);
+          enterValue(key);
 
           input.focus();
         });
