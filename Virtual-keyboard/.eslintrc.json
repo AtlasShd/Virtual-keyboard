@@ -10,6 +10,9 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "ignorePatterns": ["/dist/", "/gulp/"],
     "rules": {
+			"import/extensions":"off",
+      "no-console":"off"
     }
 }
