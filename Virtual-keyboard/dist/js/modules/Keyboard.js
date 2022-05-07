@@ -1,5 +1,5 @@
 import Key from './Key.js';
-import keysJson from '../services/keys.json' assert { type: "json" };
+import keysJs from '../services/keys.js';
 
 export default class Keyboard {
   constructor(name, input = null) {
@@ -9,7 +9,7 @@ export default class Keyboard {
   }
 
   createElement() {
-    const arrOfKeys = keysJson;
+    const arrOfKeys = keysJs;
 
     this.element = document.createElement('div');
     this.element.classList.add(this.name);

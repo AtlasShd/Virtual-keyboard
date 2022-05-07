@@ -7,7 +7,8 @@
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp build --build",
-		"zip": "gulp deployZip --build"
+		"zip": "gulp deployZip --build",
+    "lint:fix":"eslint ./src --fix"
 	},
 	"author": "Atlas",
 	"license": "ISC",

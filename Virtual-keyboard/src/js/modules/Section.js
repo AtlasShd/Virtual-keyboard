@@ -14,17 +14,20 @@ export default class Section {
     container.classList.add(`${this.name}__container`, 'container');
     this.element.append(container);
 
-    const title = document.createElement('h2');
-    title.classList.add(`${this.name}__title`, 'title');
-    title.innerHTML = this.title;
-    container.append(title);
+    if (this.title) {
+      const title = document.createElement('h2');
+      title.classList.add(`${this.name}__title`, 'title');
+      title.innerHTML = this.title;
+      container.append(title);
+    }
 
     const body = document.createElement('div');
     body.classList.add(`${this.name}__body`);
     container.append(body);
 
     if (this.innerElement) {
-      body.append(this.innerElement);
+      // body.append(this.innerElement);
+      this.innerElement(body);
     }
 
     return this.element;
