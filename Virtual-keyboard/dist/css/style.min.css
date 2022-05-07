@@ -221,6 +221,7 @@ footer {
 }
 
 .welcome {
+  pointer-events: none;
   height: 100%;
 }
 .welcome__container {
@@ -260,6 +261,7 @@ footer {
   letter-spacing: 3px;
   line-height: 24px;
   text-shadow: 0 1px 5px var(--red), 0 -1px 5px var(--red);
+  pointer-events: auto;
 }
 .keyboard__keyboard {
   width: 100%;
@@ -293,6 +295,7 @@ footer {
   background: none;
   cursor: pointer;
   user-select: none;
+  pointer-events: auto;
 }
 .keyboard__key:hover {
   color: var(--sky);
@@ -311,13 +314,13 @@ footer {
   box-shadow: 0px 0px 5px 5px var(--opacity-sky), 0px 0px 0px 0px var(--opacity-sky) inset;
   border-radius: 0;
 }
-.keyboard__not-func-key {
+.keyboard__red-key {
   color: var(--red);
   text-shadow: 0 1px 5px var(--opacity-red), 0 -1px 5px var(--opacity-red);
   border: 1px solid var(--red);
   box-shadow: 0px 0px 5px 5px var(--opacity-red), 0px 0px 8px 6px var(--opacity-red) inset;
 }
-.keyboard__func-key {
+.keyboard__blue-key {
   color: var(--blue);
   text-shadow: 0 1px 5px var(--opacity-blue), 0 -1px 5px var(--opacity-blue);
   border: 1px solid var(--blue);

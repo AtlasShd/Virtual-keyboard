@@ -120,6 +120,7 @@ footer {
 // keyboard section
 
 .welcome {
+	pointer-events: none;
 	height: 100%;
 
 	&__container {
@@ -162,6 +163,7 @@ footer {
 			letter-spacing: 3px;
 			line-height: 24px;
 			text-shadow: 0 1px 5px var(--red), 0 -1px 5px var(--red);
+			pointer-events: auto;
 		}
 	}
 
@@ -199,6 +201,7 @@ footer {
 		background: none;
 		cursor: pointer;
 		user-select: none;
+		pointer-events: auto;
 
 		&:hover {
 			color: var(--sky);
@@ -221,14 +224,14 @@ footer {
 		border-radius: 0;
 	}
 
-	&__not-func-key {
+	&__red-key {
 		color: var(--red);
 		text-shadow: 0 1px 5px var(--opacity-red), 0 -1px 5px var(--opacity-red);
 		border: 1px solid var(--red);
 		box-shadow: 0px 0px 5px 5px var(--opacity-red), 0px 0px 8px 6px var(--opacity-red) inset;
 	}
 
-	&__func-key {
+	&__blue-key {
 		color: var(--blue);
 		text-shadow: 0 1px 5px var(--opacity-blue), 0 -1px 5px var(--opacity-blue);
 		border: 1px solid var(--blue);

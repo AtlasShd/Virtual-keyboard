@@ -3,458 +3,522 @@
   	{
   	  "name": "backquote",
 			"value": "`",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Backquote"
+			"endata": "Backquote",
+			"color": "red"
   	},
   	{
   	  "name": "one",
 			"value": "1",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit1"
+			"endata": "Digit1",
+			"color": "red"
   	},
   	{
   	  "name": "two",
 			"value": "2",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit2"
+			"endata": "Digit2",
+			"color": "red"
   	},
   	{
   	  "name": "three",
 			"value": "3",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit3"
+			"endata": "Digit3",
+			"color": "red"
   	},
   	{
   	  "name": "four",
 			"value": "4",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit4"
+			"endata": "Digit4",
+			"color": "red"
   	},
   	{
   	  "name": "five",
 			"value": "5",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit5"
+			"endata": "Digit5",
+			"color": "red"
   	},
   	{
   	  "name": "six",
 			"value": "6",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit6"
+			"endata": "Digit6",
+			"color": "red"
   	},
   	{
   	  "name": "seven",
 			"value": "7",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit7"
+			"endata": "Digit7",
+			"color": "red"
   	},
   	{
   	  "name": "eight",
 			"value": "8",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit8"
+			"endata": "Digit8",
+			"color": "red"
   	},
   	{
   	  "name": "nine",
 			"value": "9",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit9"
+			"endata": "Digit9",
+			"color": "red"
   	},
   	{
   	  "name": "zero",
 			"value": "0",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Digit0"
+			"endata": "Digit0",
+			"color": "red"
   	},
   	{
   	  "name": "minus",
 			"value": "-",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Minus"
+			"endata": "Minus",
+			"color": "red"
   	},
   	{
   	  "name": "equal",
 			"value": "=",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Equal"
+			"endata": "Equal",
+			"color": "red"
  		},
  		{
  	   "name": "backspace",
 			"value": "&#10229;",
-			"functional": "func",
+			"functional": true,
 			"size": "flex",
-			"endata": "Backspace"
+			"endata": "Backspace",
+			"color": "blue"
  		}
 	],
 	[
 		{
 			"name": "tab",
 			"value": "Tab",
-			"functional": "func",
+			"functional": true,
 			"size": "flex",
-			"endata": "Tab"
+			"endata": "Tab",
+			"color": "blue"
 		},
 		{
 			"name": "q",
 			"value": "q",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyQ"
+			"endata": "KeyQ",
+			"color": "red"
 		},
 		{
 			"name": "w",
 			"value": "w",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyW"
+			"endata": "KeyW",
+			"color": "red"
 		},
 		{
 			"name": "e",
 			"value": "e",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyE"
+			"endata": "KeyE",
+			"color": "red"
 		},
 		{
 			"name": "r",
 			"value": "r",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyR"
+			"endata": "KeyR",
+			"color": "red"
 		},
 		{
 			"name": "t",
 			"value": "t",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyT"
+			"endata": "KeyT",
+			"color": "red"
 		},
 		{
 			"name": "y",
 			"value": "y",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyY"
+			"endata": "KeyY",
+			"color": "red"
 		},
 		{
 			"name": "u",
 			"value": "u",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyU"
+			"endata": "KeyU",
+			"color": "red"
 		},
 		{
 			"name": "i",
 			"value": "i",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyI"
+			"endata": "KeyI",
+			"color": "red"
 		},
 		{
 			"name": "o",
 			"value": "o",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyO"
+			"endata": "KeyO",
+			"color": "red"
 		},
 		{
 			"name": "p",
 			"value": "p",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyP"
+			"endata": "KeyP",
+			"color": "red"
 		},
 		{
 			"name": "left-square-bracket",
 			"value": "[",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "BracketLeft"
+			"endata": "BracketLeft",
+			"color": "red"
 		},
 		{
 			"name": "right-square-bracket",
 			"value": "]",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "BracketRight"
+			"endata": "BracketRight",
+			"color": "red"
 		},
 		{
 			"name": "backslash",
 			"value": "\\",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Backslash"
+			"endata": "Backslash",
+			"color": "red"
 		},
 		{
 			"name": "del",
 			"value": "Del",
-			"functional": "func",
+			"functional": true,
 			"size": "fix",
-			"endata": "Delete"
+			"endata": "Delete",
+			"color": "blue"
 		}
 	],
 	[
 		{
 			"name": "capslock",
 			"value": "CapsLock",
-			"functional": "func",
+			"functional": true,
 			"size": "flex",
-			"endata": "CapsLock"
+			"endata": "CapsLock",
+			"color": "blue"
 		},
 		{
 			"name": "a",
 			"value": "a",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyA"
+			"endata": "KeyA",
+			"color": "red"
 		},
 		{
 			"name": "s",
 			"value": "s",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyS"
+			"endata": "KeyS",
+			"color": "red"
 		},
 		{
 			"name": "d",
 			"value": "d",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyD"
+			"endata": "KeyD",
+			"color": "red"
 		},
 		{
 			"name": "f",
 			"value": "f",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyF"
+			"endata": "KeyF",
+			"color": "red"
 		},
 		{
 			"name": "g",
 			"value": "g",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyG"
+			"endata": "KeyG",
+			"color": "red"
 		},
 		{
 			"name": "h",
 			"value": "h",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyH"
+			"endata": "KeyH",
+			"color": "red"
 		},
 		{
 			"name": "j",
 			"value": "j",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyJ"
+			"endata": "KeyJ",
+			"color": "red"
 		},
 		{
 			"name": "k",
 			"value": "k",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyK"
+			"endata": "KeyK",
+			"color": "red"
 		},
 		{
 			"name": "l",
 			"value": "l",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyL"
+			"endata": "KeyL",
+			"color": "red"
 		},
 		{
 			"name": "semecolon",
 			"value": ";",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Semicolon"
+			"endata": "Semicolon",
+			"color": "red"
 		},
 		{
 			"name": "single-quote",
 			"value": "'",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Quote"
+			"endata": "Quote",
+			"color": "red"
 		},
 		{
 			"name": "enter",
 			"value": "Enter",
-			"functional": "func",
+			"functional": true,
 			"size": "flex",
-			"endata": "Enter"
+			"endata": "Enter",
+			"color": "blue"
 		}
 	],
 	[
 		{
 			"name": "left-shift",
 			"value": "Shift",
-			"functional": "func",
+			"functional": true,
 			"size": "flex",
-			"endata": "ShiftLeft"
+			"endata": "ShiftLeft",
+			"color": "blue"
 		},
 		{
 			"name": "z",
 			"value": "z",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyZ"
+			"endata": "KeyZ",
+			"color": "red"
 		},
 		{
 			"name": "x",
 			"value": "x",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyX"
+			"endata": "KeyX",
+			"color": "red"
 		},
 		{
 			"name": "c",
 			"value": "c",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyC"
+			"endata": "KeyC",
+			"color": "red"
 		},
 		{
 			"name": "v",
 			"value": "v",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyV"
+			"endata": "KeyV",
+			"color": "red"
 		},
 		{
 			"name": "b",
 			"value": "b",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyB"
+			"endata": "KeyB",
+			"color": "red"
 		},
 		{
 			"name": "n",
 			"value": "n",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyN"
+			"endata": "KeyN",
+			"color": "red"
 		},
 		{
 			"name": "m",
 			"value": "m",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "KeyM"
+			"endata": "KeyM",
+			"color": "red"
 		},
 		{
 			"name": "comma",
 			"value": ",",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Comma"
+			"endata": "Comma",
+			"color": "red"
 		},
 		{
 			"name": "dot",
 			"value": ".",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Period"
+			"endata": "Period",
+			"color": "red"
 		},
 		{
 			"name": "slash",
 			"value": "/",
-			"functional": "not-func",
+			"functional": false,
 			"size": "fix",
-			"endata": "Slash"
+			"endata": "Slash",
+			"color": "red"
 		},
 		{
 			"name": "up-arrow",
 			"value": "△",
-			"functional": "func",
+			"functional": false,
 			"size": "fix",
-			"endata": "ArrowUp"
+			"endata": "ArrowUp",
+			"color": "blue"
 		},
 		{
 			"name": "right-shift",
 			"value": "Shift",
-			"functional": "func",
+			"functional": true,
 			"size": "flex",
-			"endata": "ShiftRight"
+			"endata": "ShiftRight",
+			"color": "blue"
 		}
 	],
 	[
 		{
 			"name": "left-ctrl",
 			"value": "Ctrl",
-			"functional": "func",
+			"functional": true,
 			"size": "fix",
-			"endata": "ControlLeft"
+			"endata": "ControlLeft",
+			"color": "blue"
 		},
 		{
 			"name": "win",
 			"value": "Win",
-			"functional": "func",
+			"functional": true,
 			"size": "fix",
-			"endata": "MetaLeft"
+			"endata": "MetaLeft",
+			"color": "blue"
 		},
 		{
 			"name": "left-alt",
 			"value": "Alt",
-			"functional": "func",
+			"functional": true,
 			"size": "fix",
-			"endata": "AltLeft"
+			"endata": "AltLeft",
+			"color": "blue"
 		},
 		{
 			"name": "space",
 			"value": " ",
-			"functional": "not-func",
+			"functional": false,
 			"size": "flex",
-			"endata": "Space"
+			"endata": "Space",
+			"color": "red"
 		},
 		{
 			"name": "right-alt",
 			"value": "Alt",
-			"functional": "func",
+			"functional": true,
 			"size": "fix",
-			"endata": "AltRight"
+			"endata": "AltRight",
+			"color": "blue"
 		},
 		{
 			"name": "left-arrow",
 			"value": "◁",
-			"functional": "func",
+			"functional": false,
 			"size": "fix",
-			"endata": "ArrowLeft"
+			"endata": "ArrowLeft",
+			"color": "blue"
 		},
 		{
 			"name": "down-arrow",
 			"value": "▽",
-			"functional": "func",
+			"functional": false,
 			"size": "fix",
-			"endata": "ArrowDown"
+			"endata": "ArrowDown",
+			"color": "blue"
 		},
 		{
 			"name": "right-arrow",
 			"value": "▷",
-			"functional": "func",
+			"functional": false,
 			"size": "fix",
-			"endata": "ArrowRight"
+			"endata": "ArrowRight",
+			"color": "blue"
 		},
 		{
 			"name": "right-ctrl",
 			"value": "Ctrl",
-			"functional": "func",
+			"functional": true,
 			"size": "fix",
-			"endata": "ControlRight"
+			"endata": "ControlRight",
+			"color": "blue"
 		}
 	]
 ]

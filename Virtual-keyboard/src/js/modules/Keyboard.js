@@ -23,7 +23,6 @@ export default class Keyboard {
 		textarea.setAttribute('rows', '2');
 		textareaDiv.append(textarea);
 
-
 		const keyboard = document.createElement('div');
 		keyboard.classList.add(`${this.name}__keyboard`);
 		this.element.append(keyboard);
@@ -36,9 +35,9 @@ export default class Keyboard {
 			const oneRow = arrOfKeys[i];
 
 			for (let j = 0; j < oneRow.length; j++) {
-				const { name, value, functional, size, endata } = oneRow[j];
+				const { name, value, functional, size, endata, color } = oneRow[j];
 
-				const key = new Key(this.name, name, value, functional, size, textarea, endata).render(row);
+				const key = new Key(this.name, name, value, functional, size, textarea, endata, color).render(row);
 			}
 		}
 
