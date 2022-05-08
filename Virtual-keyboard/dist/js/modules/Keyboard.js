@@ -1,6 +1,5 @@
 import Key from './Key.js';
 import keysArray from '../services/keysArray.js';
-import alphabet from '../services/alphabet.js';
 
 export default class Keyboard {
   constructor(name, input = null) {
@@ -8,6 +7,7 @@ export default class Keyboard {
     this.keys = {};
     this.input = input;
     this.lang = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'eng';
+    this.capsLock = false;
     this.shift = false;
   }
 
@@ -47,12 +47,12 @@ export default class Keyboard {
 
       for (let j = 0; j < oneRow.length; j += 1) {
         const {
-          name, value, functional, size, endata, color,
+          eng, engShift, rus, rusShift, func, size, id, color,
         } = oneRow[j];
 
-        const key = new Key(this.name, name, value, functional, size, this.input, endata, color)
+        const key = new Key(this.name, func, size, this.input, id, color, eng, engShift, rus, rusShift)
           .render(row);
-        this.keys[name] = key;
+        this.keys[id] = key;
       }
     }
 
@@ -71,7 +71,7 @@ export default class Keyboard {
       const start = input.selectionStart;
       const end = input.selectionEnd;
 
-      const text = input.value.substring(0, start) + key.innerHTML + input.value.substring(end);
+      const text = input.value.substring(0, start) + key.innerText + input.value.substring(end);
       input.value = text;
 
       input.selectionEnd = start === end ? end + 1 : start + 1;
@@ -81,20 +81,34 @@ export default class Keyboard {
     const setLang = (language) => {
       const secondLanguage = (language === 'eng') ? 'rus' : 'eng';
 
+      let dataItem;
+
+      if ((this.shift && !this.capsLock) || (this.shift && this.capsLock)) {
+        dataItem = `data-${secondLanguage}shift`;
+      } else {
+        dataItem = `data-${secondLanguage}`;
+      }
+
       keysOfKeys.forEach((i) => {
         const k = keys[i];
-        if (k.dataset.func === 'false') {
-          const indexOf = alphabet[language].indexOf(k.innerHTML.toLowerCase());
 
-          let valueOf = alphabet[secondLanguage][indexOf];
-          if (this.shift) {
-            valueOf = valueOf.toUpperCase();
-          }
-
-          console.log(indexOf, valueOf);
-          k.innerHTML = valueOf;
+        if (k.dataset.func === 'true') {
+          return;
         }
+
+        let attribute;
+
+        if (this.capsLock && !this.shift) {
+          attribute = k.getAttribute(dataItem).toUpperCase();
+        } else if (this.capsLock && this.shift) {
+          attribute = k.getAttribute(dataItem).toLowerCase();
+        } else {
+          attribute = k.getAttribute(dataItem);
+        }
+
+        k.innerHTML = attribute;
       });
+
       window.localStorage.setItem('lang', secondLanguage);
 
       return secondLanguage;
@@ -103,17 +117,51 @@ export default class Keyboard {
       this.lang = setLang('eng');
     }
 
-    const setShift = (shif) => {
+    const setCapsLock = (caps) => {
       keysOfKeys.forEach((j) => {
         const k = keys[j];
 
-        if (k.dataset.func === 'false') {
-          if (shif) {
-            k.innerHTML = k.innerHTML.toLowerCase();
-          } else {
-            k.innerHTML = k.innerHTML.toUpperCase();
-          }
+        if (k.dataset.func === 'true') {
+          return;
         }
+
+        if ((!caps && !this.shift) || (caps && this.shift)) {
+          k.innerHTML = k.innerHTML.toUpperCase();
+        } else {
+          k.innerHTML = k.innerHTML.toLowerCase();
+        }
+      });
+
+      return !caps;
+    };
+
+    const setShift = (shif) => {
+      let dataItem;
+
+      if ((this.capsLock && !shif) || (!this.capsLock && !shif)) {
+        dataItem = `data-${this.lang}shift`;
+      } else {
+        dataItem = `data-${this.lang}`;
+      }
+
+      keysOfKeys.forEach((j) => {
+        const k = keys[j];
+
+        if (k.dataset.func === 'true') {
+          return;
+        }
+
+        let attribute;
+
+        if (this.capsLock && !shif) {
+          attribute = k.getAttribute(dataItem).toLowerCase();
+        } else if (this.capsLock && shif) {
+          attribute = k.getAttribute(dataItem).toUpperCase();
+        } else {
+          attribute = k.getAttribute(dataItem);
+        }
+
+        k.innerHTML = attribute;
       });
 
       return !shif;
@@ -122,20 +170,31 @@ export default class Keyboard {
     document.addEventListener('keydown', (e) => {
       e.preventDefault();
 
-      const key = document.querySelector(`[data-endata="${e.code}"]`);
+      const keydown = e.code;
+      const key = document.querySelector(`#${keydown}`);
 
       if (!key) {
+        return;
+      }
+
+      if ((keydown === 'ShiftLeft' || keydown === 'ShiftRight') && this.shift) {
         return;
       }
 
       if (key.dataset.func === 'false') {
         enterValue(key);
       } else {
-        downKeys[e.code] = true;
+        downKeys[keydown] = true;
         if (downKeys.ControlLeft === true && downKeys.AltLeft === true) {
           this.lang = setLang(this.lang);
-        } else if (e.code === 'CapsLock') {
-          this.shift = setShift(this.shift);
+        } else if (keydown === 'CapsLock') {
+          this.capsLock = setCapsLock(this.capsLock);
+        } else if (keydown === 'ShiftLeft' || keydown === 'ShiftRight') {
+          if (!this.shift) {
+            this.shift = setShift(this.shift);
+          }
+        } else {
+          console.log(keydown, 1);
         }
       }
 
@@ -143,16 +202,22 @@ export default class Keyboard {
     });
 
     document.addEventListener('keyup', (e) => {
-      e.preventDefault();
+      const keyup = e.code;
 
-      if (e.code === 'CapsLock' && this.shift) {
+      if (keyup === 'CapsLock' && this.capsLock) {
         return;
       }
 
-      const key = document.querySelector(`[data-endata="${e.code}"]`);
+      if (keyup === 'ShiftLeft' || keyup === 'ShiftRight') {
+        if (this.shift) {
+          this.shift = setShift(this.shift);
+        }
+      }
+
+      const key = document.querySelector(`#${keyup}`);
 
       key.classList.remove('active');
-      downKeys[e.code] = false;
+      downKeys[keyup] = false;
     });
 
     keysOfKeys.forEach((i) => {
@@ -164,9 +229,9 @@ export default class Keyboard {
 
           input.focus();
         });
-      } else if (key.dataset.endata === 'CapsLock') {
+      } else if (key.id === 'CapsLock') {
         key.addEventListener('click', () => {
-          this.shift = setShift(this.shift);
+          this.capsLock = setShift(this.capsLock);
         });
       } else {
         key.addEventListener('click', () => {

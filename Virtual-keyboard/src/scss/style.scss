@@ -194,12 +194,13 @@ footer {
   }
 
   &__key {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 17px;
     font-weight: 200;
-    letter-spacing: 0.15em;
+    letter-spacing: 1px;
     line-height: 0;
     height: 100%;
     border-radius: 10px;
