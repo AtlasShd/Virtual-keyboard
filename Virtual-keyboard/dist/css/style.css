@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*Обнуление*/
 * {
   padding: 0;
   margin: 0;
@@ -90,7 +88,6 @@ h6 {
   font-weight: inherit;
 }
 
-/*--------------------*/
 @font-face {
   font-family: Inter;
   font-display: swap;
@@ -109,6 +106,8 @@ h6 {
   --opacity-blue: #079cca20;
   --sky: #f9b5fd;
   --opacity-sky: #f9b5fd20;
+  --green: #7cff22;
+  --opacity-green: #7cff2220;
 }
 
 html {
@@ -117,6 +116,7 @@ html {
 
 .header,
 .welcome,
+.tips,
 .footer {
   font-family: Inter;
   font-size: 20px;
@@ -129,6 +129,7 @@ html {
 @media (max-width: 768px) {
   .header,
 .welcome,
+.tips,
 .footer {
     font-size: 16px;
     line-height: 32px;
@@ -137,6 +138,7 @@ html {
 
 .header,
 .welcome,
+.tips,
 .footer {
   background: var(--bg-dark);
   transition: background 0.5s ease-in-out 0s;
@@ -236,7 +238,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   row-gap: 25px;
-  margin-bottom: -100px;
+  margin-bottom: -270px;
 }
 .keyboard__textarea {
   display: flex;
@@ -373,6 +375,15 @@ footer {
   }
 }
 
+.tips {
+  color: var(--blue);
+  text-shadow: 0 0 5px var(--blue);
+}
+.tips__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer__body {
   display: flex;
   height: 110px;

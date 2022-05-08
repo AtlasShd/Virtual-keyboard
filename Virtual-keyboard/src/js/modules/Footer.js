@@ -8,7 +8,6 @@ export default class Footer {
   createElement() {
     this.element = document.createElement('footer');
 
-    // const footerBody = document.createElement('div');
     const footerBody = (body) => {
       const b = body;
 
@@ -34,7 +33,7 @@ export default class Footer {
       `;
     };
 
-    new Section('footer', null, footerBody).render(this.element);
+    this.element = new Section('footer', null, footerBody).createElement();
 
     return this.element;
   }

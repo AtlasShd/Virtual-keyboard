@@ -12,8 +12,6 @@
     },
     "ignorePatterns": ["/dist/", "/gulp/"],
     "rules": {
-			"import/extensions":"off",
-      "no-console":"off",
-      "max-len": "off"
+			"import/extensions":"off"
     }
 }

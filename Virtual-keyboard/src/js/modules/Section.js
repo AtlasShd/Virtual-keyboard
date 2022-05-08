@@ -26,7 +26,6 @@ export default class Section {
     container.append(body);
 
     if (this.innerElement) {
-      // body.append(this.innerElement);
       this.innerElement(body);
     }
 

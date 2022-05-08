@@ -7,11 +7,13 @@ export default class Welcome {
   }
 
   createElement() {
-    const keyboard = (body) => {
-      body.append(new Keyboard('keyboard').createElement());
+    const keyboard = new Keyboard('keyboard').createElement();
+
+    const keyboardFunc = (body) => {
+      body.append(keyboard);
     };
 
-    this.element = new Section('welcome', 'Virtual keyboard', keyboard).createElement();
+    this.element = new Section('welcome', 'Virtual keyboard', keyboardFunc).createElement();
 
     return this.element;
   }

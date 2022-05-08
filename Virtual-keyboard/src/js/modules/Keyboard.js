@@ -51,8 +51,18 @@ export default class Keyboard {
           eng, engShift, rus, rusShift, func, size, id, color,
         } = oneRow[j];
 
-        const key = new Key(this.name, func, size, this.input, id, color, eng, engShift, rus, rusShift)
-          .render(row);
+        const key = new Key(
+          this.name,
+          func,
+          size,
+          this.input,
+          id,
+          color,
+          eng,
+          engShift,
+          rus,
+          rusShift,
+        ).render(row);
         this.keys[id] = key;
       }
     }
@@ -243,10 +253,6 @@ export default class Keyboard {
           enterValue('\n');
           input.focus();
         });
-      } else {
-        key.addEventListener('click', () => {
-          console.log('That functional button');
-        });
       }
     });
 
@@ -286,8 +292,6 @@ export default class Keyboard {
           enterValue('\t');
         } else if (keydown === 'Enter') {
           enterValue('\n');
-        } else {
-          console.log(keydown, 1);
         }
       }
 

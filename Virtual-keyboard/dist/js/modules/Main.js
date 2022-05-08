@@ -1,5 +1,6 @@
 import Welcome from './Welcome.js';
 import Footer from './Footer.js';
+import Tips from './Tips.js';
 
 export default class Main {
   constructor() {
@@ -10,6 +11,7 @@ export default class Main {
     this.element = document.createElement('main');
 
     new Welcome().render(this.element);
+    new Tips().render(this.element);
     new Footer().render(this.element);
 
     return this.element;
