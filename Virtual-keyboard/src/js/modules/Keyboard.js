@@ -8,6 +8,7 @@ export default class Keyboard {
     this.keys = {};
     this.input = input;
     this.lang = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'eng';
+    this.shift = false;
   }
 
   createElement() {
@@ -83,9 +84,12 @@ export default class Keyboard {
       keysOfKeys.forEach((i) => {
         const k = keys[i];
         if (k.dataset.func === 'false') {
-          const indexOf = alphabet[language].indexOf(k.innerHTML);
+          const indexOf = alphabet[language].indexOf(k.innerHTML.toLowerCase());
 
-          const valueOf = alphabet[secondLanguage][indexOf];
+          let valueOf = alphabet[secondLanguage][indexOf];
+          if (this.shift) {
+            valueOf = valueOf.toUpperCase();
+          }
 
           console.log(indexOf, valueOf);
           k.innerHTML = valueOf;
@@ -98,6 +102,22 @@ export default class Keyboard {
     if (this.lang === 'rus') {
       this.lang = setLang('eng');
     }
+
+    const setShift = (shif) => {
+      keysOfKeys.forEach((j) => {
+        const k = keys[j];
+
+        if (k.dataset.func === 'false') {
+          if (shif) {
+            k.innerHTML = k.innerHTML.toLowerCase();
+          } else {
+            k.innerHTML = k.innerHTML.toUpperCase();
+          }
+        }
+      });
+
+      return !shif;
+    };
 
     document.addEventListener('keydown', (e) => {
       e.preventDefault();
@@ -114,6 +134,8 @@ export default class Keyboard {
         downKeys[e.code] = true;
         if (downKeys.ControlLeft === true && downKeys.AltLeft === true) {
           this.lang = setLang(this.lang);
+        } else if (e.code === 'CapsLock') {
+          this.shift = setShift(this.shift);
         }
       }
 
@@ -122,6 +144,10 @@ export default class Keyboard {
 
     document.addEventListener('keyup', (e) => {
       e.preventDefault();
+
+      if (e.code === 'CapsLock' && this.shift) {
+        return;
+      }
 
       const key = document.querySelector(`[data-endata="${e.code}"]`);
 
@@ -137,6 +163,10 @@ export default class Keyboard {
           enterValue(key);
 
           input.focus();
+        });
+      } else if (key.dataset.endata === 'CapsLock') {
+        key.addEventListener('click', () => {
+          this.shift = setShift(this.shift);
         });
       } else {
         key.addEventListener('click', () => {
