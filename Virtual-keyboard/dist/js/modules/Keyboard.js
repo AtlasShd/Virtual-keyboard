@@ -9,6 +9,7 @@ export default class Keyboard {
     this.lang = window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : 'eng';
     this.capsLock = false;
     this.shift = false;
+    this.downKeys = {};
   }
 
   createElement() {
@@ -62,19 +63,49 @@ export default class Keyboard {
   }
 
   addEvents() {
-    const { keys, input } = this;
+    const { keys, input, downKeys } = this;
     const keysOfKeys = Object.keys(keys);
 
-    const downKeys = {};
-
-    const enterValue = (key) => {
+    const enterValue = (val) => {
       const start = input.selectionStart;
       const end = input.selectionEnd;
 
-      const text = input.value.substring(0, start) + key.innerText + input.value.substring(end);
+      const text = input.value.substring(0, start) + val + input.value.substring(end);
       input.value = text;
 
       input.selectionEnd = start === end ? end + 1 : start + 1;
+      input.selectionStart = input.selectionEnd;
+    };
+
+    const removeBackValue = () => {
+      const start = input.selectionStart;
+      const end = input.selectionEnd;
+
+      let text;
+      if (start === end) {
+        text = input.value.substring(0, start - 1) + input.value.substring(end);
+      } else {
+        text = input.value.substring(0, start) + input.value.substring(end);
+      }
+      input.value = text;
+
+      input.selectionEnd = start === end ? end - 1 : start;
+      input.selectionStart = input.selectionEnd;
+    };
+
+    const removeNextValue = () => {
+      const start = input.selectionStart;
+      const end = input.selectionEnd;
+
+      let text;
+      if (start === end) {
+        text = input.value.substring(0, start) + input.value.substring(end + 1);
+      } else {
+        text = input.value.substring(0, start) + input.value.substring(end);
+      }
+      input.value = text;
+
+      input.selectionEnd = start === end ? end : start;
       input.selectionStart = input.selectionEnd;
     };
 
@@ -167,6 +198,58 @@ export default class Keyboard {
       return !shif;
     };
 
+    keysOfKeys.forEach((i) => {
+      const key = keys[i];
+
+      if (key.dataset.func === 'false') {
+        key.addEventListener('click', () => {
+          enterValue(key.innerText);
+          input.focus();
+        });
+      } else if (key.id === 'AltRight' || key.id === 'AltLeft' || key.id === 'ControlRight' || key.id === 'ControlLeft') {
+        key.addEventListener('click', () => {
+          downKeys[key.id] = true;
+          if (downKeys.ControlLeft === true && downKeys.AltLeft === true) {
+            this.lang = setLang(this.lang);
+          }
+          downKeys[key.id] = false;
+        });
+      } else if (key.id === 'CapsLock') {
+        key.addEventListener('click', () => {
+          this.capsLock = setShift(this.capsLock);
+        });
+      } else if (key.id === 'Space') {
+        key.addEventListener('click', () => {
+          enterValue(' ');
+          input.focus();
+        });
+      } else if (key.id === 'Backspace') {
+        key.addEventListener('click', () => {
+          removeBackValue();
+          input.focus();
+        });
+      } else if (key.id === 'Delete') {
+        key.addEventListener('click', () => {
+          removeNextValue();
+          input.focus();
+        });
+      } else if (key.id === 'Tab') {
+        key.addEventListener('click', () => {
+          enterValue('\t');
+          input.focus();
+        });
+      } else if (key.id === 'Enter') {
+        key.addEventListener('click', () => {
+          enterValue('\n');
+          input.focus();
+        });
+      } else {
+        key.addEventListener('click', () => {
+          console.log('That functional button');
+        });
+      }
+    });
+
     document.addEventListener('keydown', (e) => {
       e.preventDefault();
 
@@ -182,7 +265,7 @@ export default class Keyboard {
       }
 
       if (key.dataset.func === 'false') {
-        enterValue(key);
+        enterValue(key.innerText);
       } else {
         downKeys[keydown] = true;
         if (downKeys.ControlLeft === true && downKeys.AltLeft === true) {
@@ -193,6 +276,16 @@ export default class Keyboard {
           if (!this.shift) {
             this.shift = setShift(this.shift);
           }
+        } else if (keydown === 'Space') {
+          enterValue(' ');
+        } else if (keydown === 'Backspace') {
+          removeBackValue();
+        } else if (keydown === 'Delete') {
+          removeNextValue();
+        } else if (keydown === 'Tab') {
+          enterValue('\t');
+        } else if (keydown === 'Enter') {
+          enterValue('\n');
         } else {
           console.log(keydown, 1);
         }
@@ -218,26 +311,6 @@ export default class Keyboard {
 
       key.classList.remove('active');
       downKeys[keyup] = false;
-    });
-
-    keysOfKeys.forEach((i) => {
-      const key = keys[i];
-
-      if (key.dataset.func === 'false') {
-        key.addEventListener('click', () => {
-          enterValue(key);
-
-          input.focus();
-        });
-      } else if (key.id === 'CapsLock') {
-        key.addEventListener('click', () => {
-          this.capsLock = setShift(this.capsLock);
-        });
-      } else {
-        key.addEventListener('click', () => {
-          console.log('That functional button');
-        });
-      }
     });
   }
 
