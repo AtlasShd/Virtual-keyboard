@@ -1,1 +1,1 @@
-# [Virtual keyboard](https://atlasshd.github.io/Virtual-keyboard/Virtual-keyboard/dist/index.html)
+# [Virtual keyboard](https://atlasshd.github.io/Virtual-keyboard/Virtual-keyboard/index.html)
