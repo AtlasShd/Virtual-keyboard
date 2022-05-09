@@ -225,15 +225,20 @@ export default class Keyboard {
           downKeys[key.id] = false;
         });
       } else if (key.id === 'CapsLock') {
-        key.addEventListener('click', () => {
+        key.addEventListener('mousedown', () => {
           this.capsLock = setCapsLock(this.capsLock);
+
+          if (this.capsLock) {
+            key.classList.add('active');
+          } else {
+            key.classList.remove('active');
+          }
         });
       } else if (key.id === 'ShiftLeft' || key.id === 'ShiftRight') {
         key.addEventListener('mousedown', () => {
           if (!this.shift) {
             this.shift = setShift(this.shift);
-
-            key.addEventListener('mouseup', () => {
+            document.addEventListener('mouseup', () => {
               if (this.shift) {
                 this.shift = setShift(this.shift);
               }
@@ -248,9 +253,9 @@ export default class Keyboard {
               if (this.shift) {
                 this.shift = setShift(this.shift);
               }
-            }, { once: true });
+            }, { once: true, passive: true });
           }
-        });
+        }, { passive: true });
       } else if (key.id === 'Space') {
         key.addEventListener('click', () => {
           enterValue(' ');
