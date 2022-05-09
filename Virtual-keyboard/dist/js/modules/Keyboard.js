@@ -240,6 +240,17 @@ export default class Keyboard {
             }, { once: true });
           }
         });
+        key.addEventListener('touchstart', () => {
+          if (!this.shift) {
+            this.shift = setShift(this.shift);
+
+            key.addEventListener('touchend', () => {
+              if (this.shift) {
+                this.shift = setShift(this.shift);
+              }
+            }, { once: true });
+          }
+        });
       } else if (key.id === 'Space') {
         key.addEventListener('click', () => {
           enterValue(' ');
