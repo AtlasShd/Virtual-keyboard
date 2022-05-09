@@ -13,7 +13,7 @@ export default class Tips {
         <li class="tips__item">Разработка проходила на ОС Windows</li>
         <li class="tips__item">Полная поддержка Google Chrome последней версии(!)</li>
         <li class="tips__item">Кнопки для смены раскладки: left Alt + left Ctrl</li>
-        <li class="tips__item">При нажатии на стрелки, согласно ТЗ, проиходит их печать</li>
+        <li class="tips__item">При нажатии на стрелки, согласно ТЗ, проиcходит их печать</li>
       </ul>
     `;
 

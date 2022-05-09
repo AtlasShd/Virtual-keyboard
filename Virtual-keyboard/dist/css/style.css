@@ -353,8 +353,8 @@ footer {
   }
   .keyboard__key {
     border-radius: 5px;
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 10px;
+    letter-spacing: 0;
   }
 }
 @media (max-width: 460px) {
@@ -370,8 +370,7 @@ footer {
     height: calc(20% - 1.6px);
   }
   .keyboard__key {
-    font-size: 8px;
-    letter-spacing: 0.1em;
+    font-size: 7px;
   }
 }
 

@@ -226,7 +226,19 @@ export default class Keyboard {
         });
       } else if (key.id === 'CapsLock') {
         key.addEventListener('click', () => {
-          this.capsLock = setShift(this.capsLock);
+          this.capsLock = setCapsLock(this.capsLock);
+        });
+      } else if (key.id === 'ShiftLeft' || key.id === 'ShiftRight') {
+        key.addEventListener('mousedown', () => {
+          if (!this.shift) {
+            this.shift = setShift(this.shift);
+
+            key.addEventListener('mouseup', () => {
+              if (this.shift) {
+                this.shift = setShift(this.shift);
+              }
+            }, { once: true });
+          }
         });
       } else if (key.id === 'Space') {
         key.addEventListener('click', () => {
