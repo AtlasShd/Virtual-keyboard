@@ -312,19 +312,11 @@ footer {
   color: var(--blue);
   text-shadow: 0 0 5px var(--blue);
 
-  &__container {}
-
   &__body {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  &__tips {}
-
-  &__list {}
-
-  &__item {}
 }
 
 .footer {
